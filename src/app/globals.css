@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+}
+
+/* ==========================================================================
+   AEROSPACE ROBOTICS LAB - DESIGN SYSTEM
+   ========================================================================== */
+
+/* Color Tokens */
+:root {
+  --color-bg: #0a0f14;
+  --color-surface: #121821;
+  --color-surface-raised: #1a202a;
+  --color-border: #2d3748;
+  --color-border-light: #4a5568;
+  --color-accent: #00b4d8;
+  --color-accent-glow: rgba(0, 180, 216, 0.25);
+  --color-accent-subtle: rgba(0, 180, 216, 0.08);
+  --color-highlight: #ff9f1c;
+  --color-text-primary: #e8eaed;
+  --color-text-secondary: #9aa0a6;
+  --color-text-muted: #6b7280;
+}
+
+/* Base */
+html {
+  background: var(--color-bg);
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.font-mono {
+  font-family: var(--font-mono), "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-accent-subtle);
+  color: var(--color-text-primary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-light);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Corner brackets decoration */
+.corner-bracket {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--color-accent);
+}
+.corner-bracket-tl { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+.corner-bracket-tr { top: -1px; right: -1px; border-left: none; border-bottom: none; }
+.corner-bracket-bl { bottom: -1px; left: -1px; border-right: none; border-top: none; }
+.corner-bracket-br { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+/* Subtitle with accent line */
+.subtitle-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+.subtitle-line::before,
+.subtitle-line::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+}
+.subtitle-line::before { width: 2rem; }
+.subtitle-line::after { width: 100%; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   UTILITY CLASSES
+   ========================================================================== */
+
+/* Section label (e.g., "01 // THE ENGINEER") */
+.section-label {
+  font-family: var(--font-mono), "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Dot pattern background (aerospace lab aesthetic) */
+.bg-dot-pattern {
+  background-image: radial-gradient(circle, rgba(45, 55, 72, 0.4) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Primary button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-bg);
+  background: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--color-accent);
+}
+
+/* Secondary button */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.btn-secondary:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* Line clamp fallback */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -18,41 +18,40 @@ export default function HeroBackground() {
     if (!ctx) return;
 
     let animationId: number;
-    let width: number;
-    let height: number;
+    let width = 0;
+    let height = 0;
+    let path: Point[] = [];
+    let gridPoints: Point[] = [];
+    let gridCols = 20;
+    let gridRows = 12;
+    let cellW = 0;
+    let cellH = 0;
+    let numPoints = 80;
 
     const resize = () => {
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
+
+      // Rebuild path and grid with new dimensions
+      path = [];
+      for (let i = 0; i < numPoints; i++) {
+        const t = i / (numPoints - 1);
+        const x = width * 0.1 + t * width * 0.8;
+        const y = height * 0.3 + Math.sin(t * Math.PI * 2) * height * 0.15 + Math.sin(t * Math.PI * 4) * height * 0.05;
+        path.push({ x, y });
+      }
+
+      gridPoints = [];
+      cellW = width / gridCols;
+      cellH = height / gridRows;
+      for (let i = 0; i <= gridRows; i++) {
+        for (let j = 0; j <= gridCols; j++) {
+          gridPoints.push({ x: j * cellW, y: i * cellH });
+        }
+      }
     };
     resize();
     window.addEventListener('resize', resize);
-
-    // Flight path points (bezier curve)
-    const path: Point[] = [];
-    const numPoints = 80;
-    for (let i = 0; i < numPoints; i++) {
-      const t = i / (numPoints - 1);
-      // S-curve across screen with gentle waves
-      const x = width * 0.1 + t * width * 0.8;
-      const y = height * 0.3 + Math.sin(t * Math.PI * 2) * height * 0.15 + Math.sin(t * Math.PI * 4) * height * 0.05;
-      path.push({ x, y });
-    }
-
-    // Grid points for constraint net effect
-    const gridPoints: Point[] = [];
-    const gridCols = 20;
-    const gridRows = 12;
-    const cellW = width / gridCols;
-    const cellH = height / gridRows;
-    for (let i = 0; i <= gridRows; i++) {
-      for (let j = 0; j <= gridCols; j++) {
-        gridPoints.push({
-          x: j * cellW,
-          y: i * cellH,
-        });
-      }
-    }
 
     let time = 0;
     const TRAIL_LENGTH = 40;

@@ -79,3 +79,19 @@ export function useCurrentSection(): string {
 
   return section;
 }
+
+/**
+ * Legacy useScrollRaf stub for compatibility with old components.
+ * These components are no longer used, but kept for reference.
+ */
+export function useScrollRaf(_callback: (_progress: number, _velocity?: number) => void): () => void {
+  // No-op implementation - returns empty cleanup
+  return () => {};
+}
+
+/**
+ * Legacy scrollState stub for compatibility with old components.
+ */
+export const scrollState = {
+  missionComplete: 0,
+};

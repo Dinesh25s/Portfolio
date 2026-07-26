@@ -30,5 +30,5 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules", "src/components/canvas"]
+  "exclude": ["node_modules", "src/components/canvas", "src/lib/textures.ts", "src/components/dom/HUDRail.tsx", "src/components/dom/SocialRail.tsx", "src/components/dom/Loader.tsx", "src/components/dom/CustomCursor.tsx", "src/components/dom/HeroOverlay.tsx", "src/components/dom/SectionOverlays.tsx", "src/components/dom/ImpactFlash.tsx"]
 }

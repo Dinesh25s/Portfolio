@@ -1,44 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# S. Sai Dinesh — Robotics Engineer Portfolio
 
-## Getting Started
+A futuristic and interactive personal portfolio showcasing my work and experience in **Aerial Robotics, Autonomous Systems, Robotics Software, Embedded Systems, Computer Vision, AI/ML, Navigation, and Flight Control**.
 
-First, run the development server:
+The portfolio is designed as a digital representation of my engineering journey, featuring selected robotics projects, technical expertise, professional experience, and the technologies I use to build intelligent autonomous systems.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Focus Areas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Aerial Robotics & UAV Systems
+* Autonomous Navigation
+* Robotics Software Engineering
+* Embedded Systems
+* Computer Vision & AI/ML
+* ROS & ROS2
+* PX4 & ArduPilot
+* MAVLink & MAVROS
+* Path Planning & Trajectory Generation
+* Sensor Fusion & State Estimation
+* Guidance & Flight Control
+* Robotics Simulation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Engineering Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Languages:** C, C++, Python, Bash
 
-## Learn More
+**Robotics:** ROS, ROS2, PX4, ArduPilot, MAVLink, MAVROS
 
-To learn more about Next.js, take a look at the following resources:
+**AI & Vision:** OpenCV, Object Detection, Object Tracking, Computer Vision, AI/ML
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Navigation & Estimation:** GPS, Kalman Filtering, Sensor Fusion, VIO, SLAM
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Planning & Control:** PID, MPC, RRT*, B-Spline Trajectories, Path Planning, Guidance Systems
 
-## Deploy on Vercel
+**Simulation & Development:** Gazebo, PX4 SITL, ArduPilot SITL, Docker, Linux
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎯 Portfolio Vision
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The goal of this portfolio is to showcase my journey as a robotics engineer focused on developing **intelligent machines capable of perceiving, planning, and acting autonomously in the real world**.
 
-## Assets & Credits
+> Building intelligent robotic systems that move through the real world.
 
-- **Planet textures** — [Solar System Scope](https://www.solarsystemscope.com/textures/) (CC BY 4.0)
-- **HDRI lighting** — "Dikhololo Night" from [Poly Haven](https://polyhaven.com) (CC0)
-- **3D models** (astronaut, spaceship) — [Quaternius Ultimate Space Kit](https://quaternius.com) (CC0)
-- **ISS model** — [NASA 3D Resources](https://github.com/nasa/NASA-3D-Resources) (public domain, courtesy NASA)
-- Everything else (rocket, nebula, rings, HUD artwork) is generated procedurally in code.
+---
+
+**S. Sai Dinesh**
+Robotics Engineer | Aerial Robotics | Autonomous Systems | Embedded AI
